@@ -91,9 +91,12 @@
  
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.new.rest.png" Text="new"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.new.rest.png"
+                                            Text="new"
+                                            Click="ApplicationBarMenuItem_New_Click" />
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="settings" Click="ApplicationBarMenuItem_Settings_Click" />
+                <shell:ApplicationBarMenuItem Text="settings"
+                                              Click="ApplicationBarMenuItem_Settings_Click" />
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
