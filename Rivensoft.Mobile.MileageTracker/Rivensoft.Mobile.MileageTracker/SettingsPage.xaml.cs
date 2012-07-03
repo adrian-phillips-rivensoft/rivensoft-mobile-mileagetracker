@@ -16,5 +16,17 @@ namespace Rivensoft.Mobile.MileageTracker
         {
             InitializeComponent();
         }
+
+        private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
+        {
+            // TODO: Add save operation.
+        }
+
+        private void ApplicationBarIconButton_Cancel_Click(object sender, EventArgs e)
+        {
+            Uri navigateTo = new Uri("/MainPage.xaml", UriKind.Relative);
+
+            NavigationService.Navigate(navigateTo);
+        }
     }
 }
