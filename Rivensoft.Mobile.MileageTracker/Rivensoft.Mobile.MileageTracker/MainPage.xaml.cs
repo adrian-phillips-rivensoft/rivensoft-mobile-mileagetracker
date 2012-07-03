@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using Microsoft.Phone.Controls;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MainPage.cs" company="Rivensoft Limited">
+//     Copyright 2012 Rivensoft Limited. All rights reserved.
+// </copyright>
+// <author>Adrian Thompson Phillips</author>
+//-----------------------------------------------------------------------
 
 namespace Rivensoft.Mobile.MileageTracker
 {
+    using System;
+    using System.Windows;
+    using System.Windows.Navigation;
+    using Microsoft.Phone.Controls;
+
     public partial class MainPage : PhoneApplicationPage
     {
         // Constructor
@@ -32,6 +31,13 @@ namespace Rivensoft.Mobile.MileageTracker
             {
                 App.ViewModel.LoadData();
             }
+        }
+
+        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+            Uri navigateTo = new Uri("/SettingsPage.xaml", UriKind.Relative);
+
+            NavigationService.Navigate(navigateTo);
         }
     }
 }
