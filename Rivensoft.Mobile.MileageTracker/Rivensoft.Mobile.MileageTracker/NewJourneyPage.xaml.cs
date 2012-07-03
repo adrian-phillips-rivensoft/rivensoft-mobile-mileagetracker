@@ -18,6 +18,20 @@ namespace Rivensoft.Mobile.MileageTracker
         public NewJourneyPage()
         {
             InitializeComponent();
+
+            this.JourneyDate.Value = DateTime.Now.Date;
+        }
+
+        private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
+        {
+            // TODO: Insert save journey code.
+        }
+
+        private void ApplicationBarIconButton_Cancel_Click(object sender, EventArgs e)
+        {
+            Uri navigateTo = new Uri("/MainPage.xaml", UriKind.Relative);
+
+            NavigationService.Navigate(navigateTo);
         }
     }
 }
