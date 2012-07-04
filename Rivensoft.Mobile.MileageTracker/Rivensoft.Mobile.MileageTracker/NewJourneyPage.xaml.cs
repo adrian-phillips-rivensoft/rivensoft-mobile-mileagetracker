@@ -26,11 +26,19 @@ namespace Rivensoft.Mobile.MileageTracker
         {
             InitializeComponent();
 
-            this.JourneyDate.Value = DateTime.Now.Date;
+            this.Date.Value = DateTime.Now.Date;
         }
 
         private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
         {
+            // TODO: Improve the robustness of this.
+            Journey journey = new Journey()
+            {
+                Date = this.Date.Value.Value,
+                StartMileage = int.Parse(this.StartMileage.Text),
+                EndMileage = int.Parse(this.EndMileage.Text)
+            };
+
             NavigationHelper.NavigateToPage(this, "/MainPage.xaml");
         }
 

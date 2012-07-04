@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using System.Threading;
+﻿//-----------------------------------------------------------------------
+// <copyright file="App.cs" company="Rivensoft Limited">
+//     Copyright 2012 Rivensoft Limited. All rights reserved.
+// </copyright>
+// <author>Adrian Thompson Phillips</author>
+//-----------------------------------------------------------------------
 
 namespace Rivensoft.Mobile.MileageTracker
 {
+    using System;
+    using System.Threading;
+    using System.Windows;
+    using System.Windows.Navigation;
+    using Microsoft.Phone.Controls;
+    using Microsoft.Phone.Shell;
+
     public partial class App : Application
     {
         private static MainViewModel viewModel = null;
@@ -75,6 +73,32 @@ namespace Rivensoft.Mobile.MileageTracker
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+            string connectionString = "Data Source=isostore:/MileageTracker.sdf";
+
+            using (LinqDataContext dataContext = new LinqDataContext(connectionString))
+            {
+                if (!dataContext.DatabaseExists())
+                {
+                    dataContext.CreateDatabase();
+                }
+            }
+
+            JourneyRepository repo = new JourneyRepository();
+
+            //var journeys = repo.GetAll();
+
+            Journey testJourney =
+                new Journey()
+                {
+                    Date = new DateTime(2012, 4, 29),
+                    StartMileage = 12345,
+                    EndMileage = 12355
+                };
+
+            //repo.Insert(testJourney);
+
+            var readJourneys = repo.GetAll();
         }
 
         // Code to execute when the application is launching (eg, from Start)

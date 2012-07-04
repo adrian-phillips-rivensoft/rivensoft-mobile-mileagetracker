@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="JourneyViewModel.cs" company="Rivensoft Limited">
+// <copyright file="JourneyLinqEntity.cs" company="Rivensoft Limited">
 //     Copyright 2012 Rivensoft Limited. All rights reserved.
 // </copyright>
 // <author>Adrian Thompson Phillips</author>
@@ -17,27 +17,55 @@ namespace Rivensoft.Mobile.MileageTracker
     using System.Windows.Media;
     using System.Windows.Media.Animation;
     using System.Windows.Shapes;
-    using System.ComponentModel;
+    using System.Data.Linq;
+    using System.Data.Linq.Mapping;
 
-    public class JourneyViewModel : ViewModelBase
+    [Table(Name = "Journey")]
+    public class JourneyLinqEntity : LinqEntityBase
     {
-        private string date;
+        private int id;
 
-        private string startMileage;
+        private DateTime date;
 
-        private string endMileage;
+        private int startMileage;
 
-        public string Date
+        private int endMileage;
+
+        [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL IDENTITY", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
+        public int Id
         {
             get
             {
-                return this.date ?? string.Empty;
+                return this.id;
+            }
+
+            set
+            {
+                if (value != this.id)
+                {
+                    base.NotifyPropertyChanging("Id");
+
+                    this.id = value;
+
+                    base.NotifyPropertyChanged("Id");
+                }
+            }
+        }
+
+        [Column]
+        public DateTime Date
+        {
+            get
+            {
+                return this.date;
             }
 
             set
             {
                 if (value != this.date)
                 {
+                    base.NotifyPropertyChanging("Date");
+
                     this.date = value;
 
                     base.NotifyPropertyChanged("Date");
@@ -45,17 +73,20 @@ namespace Rivensoft.Mobile.MileageTracker
             }
         }
 
-        public string StartMileage
+        [Column]
+        public int StartMileage
         {
             get
             {
-                return this.startMileage ?? string.Empty;
+                return this.startMileage;
             }
 
             set
             {
                 if (value != this.startMileage)
                 {
+                    base.NotifyPropertyChanging("StartMileage");
+
                     this.startMileage = value;
 
                     base.NotifyPropertyChanged("StartMileage");
@@ -63,22 +94,28 @@ namespace Rivensoft.Mobile.MileageTracker
             }
         }
 
-        public string EndMileage
+        [Column]
+        public int EndMileage
         {
             get
             {
-                return this.endMileage ?? string.Empty;
+                return this.endMileage;
             }
 
             set
             {
                 if (value != this.endMileage)
                 {
+                    base.NotifyPropertyChanging("EndMileage");
+
                     this.endMileage = value;
 
                     base.NotifyPropertyChanged("EndMileage");
                 }
             }
         }
+
+        [Column(IsVersion = true)]
+        public Binary Version { get; set; }
     }
 }

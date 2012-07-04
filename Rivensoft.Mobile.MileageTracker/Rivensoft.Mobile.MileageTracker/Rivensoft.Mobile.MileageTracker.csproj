@@ -52,6 +52,7 @@
     <Reference Include="Microsoft.Phone.Controls" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="system.data.linq" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -71,8 +72,12 @@
     <Compile Include="EditJourneyPage.xaml.cs">
       <DependentUpon>EditJourneyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Journey.cs" />
-    <Compile Include="Entities\JourneyLog.cs" />
+    <Compile Include="Domain\Journey.cs" />
+    <Compile Include="Domain\JourneyLog.cs" />
+    <Compile Include="Persistence\LinqDataContext.cs" />
+    <Compile Include="Persistence\LinqEntities\JourneyLinqEntity.cs" />
+    <Compile Include="Persistence\LinqEntities\LinqEntityBase.cs" />
+    <Compile Include="ValueObjects\Settings.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="LocalisedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -82,13 +87,17 @@
       <DependentUpon>NewJourneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Persistence\JourneyRepository.cs" />
+    <Compile Include="Persistence\SettingsRepository.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="TiltEffect.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\JourneyLogViewModel.cs" />
     <Compile Include="ViewModels\JourneyViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -127,6 +136,7 @@
     <Content Include="Background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\appbar.check.rest.png" />
     <Content Include="Images\appbar.delete.rest.png" />
     <Content Include="Images\appbar.edit.rest.png" />
     <Content Include="Images\appbar.new.rest.png" />
@@ -143,7 +153,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

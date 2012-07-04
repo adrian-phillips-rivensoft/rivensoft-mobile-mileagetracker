@@ -11,20 +11,7 @@ namespace Rivensoft.Mobile.MileageTracker
 
     public class Journey
     {
-        private readonly Guid id;
-
-        public Journey()
-        {
-            this.id = Guid.NewGuid();
-        }
-
-        public Guid Id
-        {
-            get
-            {
-                return id;
-            }
-        }
+        public int Id { get; set; }
 
         public DateTime Date { get; set; }
 
