@@ -68,6 +68,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ApplicationResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="EditJourneyPage.xaml.cs">
+      <DependentUpon>EditJourneyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Journey.cs" />
+    <Compile Include="Entities\JourneyLog.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="LocalisedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -81,6 +87,7 @@
     </Compile>
     <Compile Include="TiltEffect.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\JourneyViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +95,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="EditJourneyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +141,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ApplicationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

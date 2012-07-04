@@ -20,13 +20,12 @@ namespace Rivensoft.Mobile.MileageTracker
         private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
         {
             // TODO: Add save operation.
+            NavigationHelper.NavigateToPage(this, "/MainPage.xaml");
         }
 
         private void ApplicationBarIconButton_Cancel_Click(object sender, EventArgs e)
         {
-            Uri navigateTo = new Uri("/MainPage.xaml", UriKind.Relative);
-
-            NavigationService.Navigate(navigateTo);
+            NavigationHelper.NavigateToPage(this, "/MainPage.xaml");
         }
     }
 }

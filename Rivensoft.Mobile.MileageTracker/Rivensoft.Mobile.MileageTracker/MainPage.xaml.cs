@@ -35,16 +35,12 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private void ApplicationBarMenuItem_New_Click(object sender, EventArgs e)
         {
-            Uri navigateTo = new Uri("/NewJourneyPage.xaml", UriKind.Relative);
-
-            NavigationService.Navigate(navigateTo);
+            NavigationHelper.NavigateToPage(this, "/NewJourneyPage.xaml");
         }
 
         private void ApplicationBarMenuItem_Settings_Click(object sender, EventArgs e)
         {
-            Uri navigateTo = new Uri("/SettingsPage.xaml", UriKind.Relative);
-
-            NavigationService.Navigate(navigateTo);
+            NavigationHelper.NavigateToPage(this, "/SettingsPage.xaml");
         }
     }
 }
