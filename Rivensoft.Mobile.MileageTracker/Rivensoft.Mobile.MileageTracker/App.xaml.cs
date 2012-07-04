@@ -136,12 +136,14 @@ namespace Rivensoft.Mobile.MileageTracker
         private void InitializePhoneApplication()
         {
             if (phoneApplicationInitialized)
+            {
                 return;
+            }
 
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
 
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
             
             ////RootFrame = new PhoneApplicationFrame();
             RootFrame = new TransitionFrame();
