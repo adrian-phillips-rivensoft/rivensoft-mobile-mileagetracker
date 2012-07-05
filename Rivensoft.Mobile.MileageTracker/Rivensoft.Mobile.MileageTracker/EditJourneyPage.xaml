@@ -30,7 +30,7 @@
         <!--ContentPanel - place additional content here-->
         <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Text="DATE" Style="{StaticResource PhoneTextNormalStyle}" />
-            <toolkit:DatePicker x:Name="JourneyDate" Margin="0,0,0,17" />
+            <toolkit:DatePicker x:Name="Date" Margin="0,0,0,17" />
             <TextBlock Text="START MILEAGE" Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBox x:Name="StartMileage" InputScope="Number" Margin="0,0,0,17" />
             <TextBlock Text="END MILEAGE" Style="{StaticResource PhoneTextNormalStyle}" />

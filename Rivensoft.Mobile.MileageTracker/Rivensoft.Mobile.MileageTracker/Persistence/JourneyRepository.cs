@@ -50,6 +50,32 @@ namespace Rivensoft.Mobile.MileageTracker
             return journeys;
         }
 
+        public Journey GetById(int id)
+        {
+            Journey journey;
+
+            string connectionString = "Data Source=isostore:/MileageTracker.sdf";
+
+            using (LinqDataContext dataContext = new LinqDataContext(connectionString))
+            {
+                JourneyLinqEntity dbJourney =
+                    dataContext.Journeys
+                        .Where(j => j.Id == id)
+                        .Single();
+
+                // TODO: Make data adapter or use automapper?
+                journey = new Journey()
+                {
+                    Id = dbJourney.Id,
+                    Date = dbJourney.Date,
+                    StartMileage = dbJourney.StartMileage,
+                    EndMileage = dbJourney.EndMileage
+                };
+            }
+
+            return journey;
+        }
+
         public void Insert(Journey journey)
         {
             JourneyLinqEntity journeyLinq = new JourneyLinqEntity()
@@ -64,6 +90,25 @@ namespace Rivensoft.Mobile.MileageTracker
             using (LinqDataContext dataContext = new LinqDataContext(connectionString))
             {
                 dataContext.Journeys.InsertOnSubmit(journeyLinq);
+
+                dataContext.SubmitChanges();
+            }
+        }
+
+        public void Update(Journey journey)
+        {
+            string connectionString = "Data Source=isostore:/MileageTracker.sdf";
+
+            using (LinqDataContext dataContext = new LinqDataContext(connectionString))
+            {
+                JourneyLinqEntity dbJourney =
+                    dataContext.Journeys
+                        .Where(j => j.Id == journey.Id)
+                        .Single();
+
+                dbJourney.Date = journey.Date;
+                dbJourney.StartMileage = journey.StartMileage;
+                dbJourney.EndMileage = journey.EndMileage;
 
                 dataContext.SubmitChanges();
             }

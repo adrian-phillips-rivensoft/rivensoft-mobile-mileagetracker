@@ -1,80 +1,94 @@
-﻿using System;
-using System.ComponentModel;
+﻿//-----------------------------------------------------------------------
+// <copyright file="ItemViewModel.cs" company="Rivensoft Limited">
+//     Copyright 2012 Rivensoft Limited. All rights reserved.
+// </copyright>
+// <author>Adrian Thompson Phillips</author>
+//-----------------------------------------------------------------------
 
 namespace Rivensoft.Mobile.MileageTracker
 {
-    public class ItemViewModel : INotifyPropertyChanged
+    using System;
+    using System.ComponentModel;
+
+    public class ItemViewModel : ViewModelBase
     {
-        private string _lineOne;
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
-        /// </summary>
-        /// <returns></returns>
+        private int id;
+
+        private string lineOne;
+
+        private string lineTwo;
+
+        private string lineThree;
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+
+            set
+            {
+                if (value != this.id)
+                {
+                    this.id = value;
+
+                    base.NotifyPropertyChanged("Id");
+                }
+            }
+        }
+
         public string LineOne
         {
             get
             {
-                return _lineOne;
+                return this.lineOne;
             }
+
             set
             {
-                if (value != _lineOne)
+                if (value != this.lineOne)
                 {
-                    _lineOne = value;
-                    NotifyPropertyChanged("LineOne");
+                    this.lineOne = value;
+
+                    base.NotifyPropertyChanged("LineOne");
                 }
             }
         }
 
-        private string _lineTwo;
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
-        /// </summary>
-        /// <returns></returns>
         public string LineTwo
         {
             get
             {
-                return _lineTwo;
+                return this.lineTwo;
             }
+
             set
             {
-                if (value != _lineTwo)
+                if (value != this.lineTwo)
                 {
-                    _lineTwo = value;
-                    NotifyPropertyChanged("LineTwo");
+                    this.lineTwo = value;
+
+                    base.NotifyPropertyChanged("LineTwo");
                 }
             }
         }
 
-        private string _lineThree;
-        /// <summary>
-        /// Sample ViewModel property; this property is used in the view to display its value using a Binding.
-        /// </summary>
-        /// <returns></returns>
         public string LineThree
         {
             get
             {
-                return _lineThree;
+                return this.lineThree;
             }
+
             set
             {
-                if (value != _lineThree)
+                if (value != this.lineThree)
                 {
-                    _lineThree = value;
-                    NotifyPropertyChanged("LineThree");
-                }
-            }
-        }
+                    this.lineThree = value;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(String propertyName)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
+                    base.NotifyPropertyChanged("LineThree");
+                }
             }
         }
     }

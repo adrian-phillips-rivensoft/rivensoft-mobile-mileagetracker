@@ -28,7 +28,9 @@ namespace Rivensoft.Mobile.MileageTracker
             {
                 // Delay creation of the view model until necessary
                 if (viewModel == null)
+                {
                     viewModel = new MainViewModel();
+                }
 
                 return viewModel;
             }
@@ -85,18 +87,6 @@ namespace Rivensoft.Mobile.MileageTracker
             }
 
             JourneyRepository repo = new JourneyRepository();
-
-            //var journeys = repo.GetAll();
-
-            Journey testJourney =
-                new Journey()
-                {
-                    Date = new DateTime(2012, 4, 29),
-                    StartMileage = 12345,
-                    EndMileage = 12355
-                };
-
-            //repo.Insert(testJourney);
 
             var readJourneys = repo.GetAll();
         }
@@ -167,7 +157,7 @@ namespace Rivensoft.Mobile.MileageTracker
             // Create the frame but don't set it as RootVisual yet; this allows the splash
             // screen to remain active until the application is ready to render.
 
-            Thread.Sleep(3000);
+            //Thread.Sleep(3000);
             
             ////RootFrame = new PhoneApplicationFrame();
             RootFrame = new TransitionFrame();

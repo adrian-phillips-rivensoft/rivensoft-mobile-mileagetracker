@@ -43,5 +43,15 @@ namespace Rivensoft.Mobile.MileageTracker
         {
             NavigationHelper.NavigateToPage(this, "/SettingsPage.xaml");
         }
+
+        private void StackPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            FrameworkElement element = sender as FrameworkElement;
+
+            if (element != null)
+            {
+                NavigationHelper.NavigateToPage(this, "/EditJourneyPage.xaml?Id=" + element.Tag);
+            }
+        }
     }
 }

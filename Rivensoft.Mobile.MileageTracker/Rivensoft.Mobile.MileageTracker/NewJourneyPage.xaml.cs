@@ -39,6 +39,12 @@ namespace Rivensoft.Mobile.MileageTracker
                 EndMileage = int.Parse(this.EndMileage.Text)
             };
 
+            JourneyRepository journeyRepository = new JourneyRepository();
+
+            journeyRepository.Insert(journey);
+
+            App.ViewModel.LoadData();
+
             NavigationHelper.NavigateToPage(this, "/MainPage.xaml");
         }
 

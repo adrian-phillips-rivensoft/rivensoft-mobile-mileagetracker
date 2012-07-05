@@ -18,5 +18,14 @@ namespace Rivensoft.Mobile.MileageTracker
         public int StartMileage { get; set; }
 
         public int EndMileage { get; set; }
+
+        public int Miles
+        {
+            get
+            {
+                // TODO: Check and throw exceptions?  Or ensure miles are fully validated on entry?
+                return this.EndMileage - this.StartMileage;
+            }
+        }
     }
 }
