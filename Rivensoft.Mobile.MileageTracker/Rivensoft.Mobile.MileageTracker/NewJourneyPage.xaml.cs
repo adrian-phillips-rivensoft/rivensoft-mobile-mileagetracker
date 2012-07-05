@@ -8,16 +8,6 @@
 namespace Rivensoft.Mobile.MileageTracker
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Documents;
-    using System.Windows.Input;
-    using System.Windows.Media;
-    using System.Windows.Media.Animation;
-    using System.Windows.Shapes;
     using Microsoft.Phone.Controls;
 
     public partial class NewJourneyPage : PhoneApplicationPage
@@ -31,7 +21,7 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
         {
-            // TODO: Improve the robustness of this.
+            // TODO: Verify input, to ensure we have start mileage, end mileage and a date.
             Journey journey = new Journey()
             {
                 Date = this.Date.Value.Value,

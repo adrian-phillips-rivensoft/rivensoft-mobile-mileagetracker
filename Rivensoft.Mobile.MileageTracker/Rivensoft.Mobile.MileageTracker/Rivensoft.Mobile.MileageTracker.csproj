@@ -69,16 +69,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ApplicationResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\EntityBase.cs" />
     <Compile Include="EditJourneyPage.xaml.cs">
       <DependentUpon>EditJourneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Journey.cs" />
     <Compile Include="Domain\JourneyLog.cs" />
     <Compile Include="Enums\UnitType.cs" />
+    <Compile Include="Persistence\CategoryRepository.cs" />
     <Compile Include="Persistence\LinqDataContext.cs" />
+    <Compile Include="Persistence\LinqEntities\CategoryLinqEntity.cs" />
     <Compile Include="Persistence\LinqEntities\JourneyLinqEntity.cs" />
     <Compile Include="Persistence\LinqEntities\LinqEntityBase.cs" />
-    <Compile Include="ValueObjects\Settings.cs" />
+    <Compile Include="Domain\Settings.cs" />
     <Compile Include="LocalisedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -93,10 +97,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="TiltEffect.cs" />
+    <Compile Include="ViewModels\EditJourneyViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
-    <Compile Include="ViewModels\JourneyLogViewModel.cs" />
-    <Compile Include="ViewModels\JourneyViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NewJourneyViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,9 +152,7 @@
       <LastGenOutput>ApplicationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -57,6 +57,8 @@ namespace Rivensoft.Mobile.MileageTracker
 
             settingsRepository.Save(settings);
 
+            App.ViewModel.LoadData();
+
             NavigationService.GoBack();
         }
 

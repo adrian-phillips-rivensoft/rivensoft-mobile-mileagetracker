@@ -9,15 +9,87 @@ namespace Rivensoft.Mobile.MileageTracker
 {
     using System;
 
-    public class Journey
+    public class Journey : EntityBase
     {
-        public int Id { get; set; }
+        private int id;
 
-        public DateTime Date { get; set; }
+        private DateTime date;
 
-        public int StartMileage { get; set; }
+        private int startMileage;
 
-        public int EndMileage { get; set; }
+        private int endMileage;
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+
+            set
+            {
+                if (value != this.id)
+                {
+                    this.id = value;
+
+                    this.NotifyPropertyChanged("Id");
+                }
+            }
+        }
+
+        public DateTime Date
+        {
+            get
+            {
+                return this.date;
+            }
+
+            set
+            {
+                if (value != this.date)
+                {
+                    this.date = value;
+
+                    this.NotifyPropertyChanged("Date");
+                }
+            }
+        }
+
+        public int StartMileage
+        {
+            get
+            {
+                return this.startMileage;
+            }
+
+            set
+            {
+                if (value != this.startMileage)
+                {
+                    this.startMileage = value;
+
+                    this.NotifyPropertyChanged("StartMileage");
+                }
+            }
+        }
+
+        public int EndMileage
+        {
+            get
+            {
+                return endMileage;
+            }
+
+            set
+            {
+                if (value != this.endMileage)
+                {
+                    this.endMileage = value;
+
+                    this.NotifyPropertyChanged("EndMileage");
+                }
+            }
+        }
 
         public int Miles
         {

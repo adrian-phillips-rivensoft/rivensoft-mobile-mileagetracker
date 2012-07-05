@@ -36,7 +36,7 @@ namespace Rivensoft.Mobile.MileageTracker
             }
         }
 
-        public Settings Settings
+        public static Settings Settings
         {
             get
             {

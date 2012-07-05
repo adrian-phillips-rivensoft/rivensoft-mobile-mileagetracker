@@ -33,7 +33,7 @@ namespace Rivensoft.Mobile.MileageTracker
                 {
                     this.id = value;
 
-                    base.NotifyPropertyChanged("Id");
+                    this.NotifyPropertyChanged("Id");
                 }
             }
         }
@@ -51,7 +51,7 @@ namespace Rivensoft.Mobile.MileageTracker
                 {
                     this.lineOne = value;
 
-                    base.NotifyPropertyChanged("LineOne");
+                    this.NotifyPropertyChanged("LineOne");
                 }
             }
         }
@@ -69,7 +69,7 @@ namespace Rivensoft.Mobile.MileageTracker
                 {
                     this.lineTwo = value;
 
-                    base.NotifyPropertyChanged("LineTwo");
+                    this.NotifyPropertyChanged("LineTwo");
                 }
             }
         }
@@ -87,7 +87,7 @@ namespace Rivensoft.Mobile.MileageTracker
                 {
                     this.lineThree = value;
 
-                    base.NotifyPropertyChanged("LineThree");
+                    this.NotifyPropertyChanged("LineThree");
                 }
             }
         }

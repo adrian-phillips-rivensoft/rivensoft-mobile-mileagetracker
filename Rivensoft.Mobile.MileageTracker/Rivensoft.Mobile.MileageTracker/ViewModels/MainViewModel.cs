@@ -38,7 +38,7 @@ namespace Rivensoft.Mobile.MileageTracker
                     new ItemViewModel()
                     {
                         Id = journey.Id,
-                        LineOne = string.Format("{0:#,0} miles", journey.Miles),
+                        LineOne = string.Format("{0:#,0} {1}", journey.Miles, App.Settings.UnitType),
                         LineTwo = journey.Date.ToString("dd/MM/yyyy")
                     };
 

@@ -15,8 +15,6 @@ namespace Rivensoft.Mobile.MileageTracker
 {
     public partial class EditJourneyPage : PhoneApplicationPage
     {
-        private Journey journey;
-
         public EditJourneyPage()
         {
             InitializeComponent();
@@ -36,25 +34,20 @@ namespace Rivensoft.Mobile.MileageTracker
 
                 int id = int.Parse(idParam);
 
-                this.journey = journeyRepository.GetById(id);
+                EditJourneyViewModel viewModel = new EditJourneyViewModel();
+                viewModel.Journey = journeyRepository.GetById(id);
 
-                // TODO: Do this instead using bindings.
-                this.Date.Value = journey.Date;
-                this.StartMileage.Text = journey.StartMileage.ToString();
-                this.EndMileage.Text = journey.EndMileage.ToString();
+                this.DataContext = viewModel;
             }
         } 
 
         private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
         {
-            // TODO: Again bindings.
-            this.journey.Date = this.Date.Value.Value;
-            this.journey.StartMileage = int.Parse(this.StartMileage.Text);
-            this.journey.EndMileage = int.Parse(this.EndMileage.Text);
-
             JourneyRepository journeyRepository = new JourneyRepository();
 
-            journeyRepository.Update(this.journey);
+            Journey journey = ((EditJourneyViewModel)this.DataContext).Journey;
+
+            journeyRepository.Update(journey);
 
             // TODO: Make the main page load data on navigate to?
             App.ViewModel.LoadData();

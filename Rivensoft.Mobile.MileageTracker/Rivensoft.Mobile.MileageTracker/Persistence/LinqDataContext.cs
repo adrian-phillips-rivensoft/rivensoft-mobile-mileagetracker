@@ -17,6 +17,8 @@ namespace Rivensoft.Mobile.MileageTracker
         {
         }
 
+        public Table<CategoryLinqEntity> Categories;
+
         public Table<JourneyLinqEntity> Journeys;
     }
 }
