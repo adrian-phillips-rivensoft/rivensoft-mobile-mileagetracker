@@ -113,5 +113,24 @@ namespace Rivensoft.Mobile.MileageTracker
                 dataContext.SubmitChanges();
             }
         }
+
+        public void DeleteOlderThan(DateTime date)
+        {
+            string connectionString = "Data Source=isostore:/MileageTracker.sdf";
+
+            using (LinqDataContext dataContext = new LinqDataContext(connectionString))
+            {
+                IEnumerable<JourneyLinqEntity> dbJourneys =
+                    dataContext.Journeys
+                        .Where(j => j.Date < date);
+
+                foreach (var dbJourney in dbJourneys)
+                {
+                    dataContext.Journeys.DeleteOnSubmit(dbJourney);
+                }
+
+                dataContext.SubmitChanges();
+            }
+        }
     }
 }

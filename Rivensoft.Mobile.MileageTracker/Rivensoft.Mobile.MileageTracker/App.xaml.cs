@@ -36,6 +36,18 @@ namespace Rivensoft.Mobile.MileageTracker
             }
         }
 
+        public Settings Settings
+        {
+            get
+            {
+                SettingsRepository settingsRepository = new SettingsRepository();
+
+                Settings settings = settingsRepository.Get();
+
+                return settings;
+            }
+        }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -118,7 +130,16 @@ namespace Rivensoft.Mobile.MileageTracker
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
-            // Ensure that required application state is persisted here.
+            // TODO: This needs putting somewhere better.
+            SettingsRepository settingsRepository = new SettingsRepository();
+
+            Settings settings = settingsRepository.Get();
+
+            DateTime expireAfter = DateTime.Now.Date.AddMonths(0 - settings.ExpireJourneysAfterMonths);
+
+            JourneyRepository journeyRepository = new JourneyRepository();
+
+            journeyRepository.DeleteOlderThan(expireAfter);
         }
 
         // Code to execute if a navigation fails

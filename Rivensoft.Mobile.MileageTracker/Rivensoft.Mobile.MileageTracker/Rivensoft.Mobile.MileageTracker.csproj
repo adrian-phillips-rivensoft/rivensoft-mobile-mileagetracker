@@ -74,11 +74,11 @@
     </Compile>
     <Compile Include="Domain\Journey.cs" />
     <Compile Include="Domain\JourneyLog.cs" />
+    <Compile Include="Enums\UnitType.cs" />
     <Compile Include="Persistence\LinqDataContext.cs" />
     <Compile Include="Persistence\LinqEntities\JourneyLinqEntity.cs" />
     <Compile Include="Persistence\LinqEntities\LinqEntityBase.cs" />
     <Compile Include="ValueObjects\Settings.cs" />
-    <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="LocalisedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -112,10 +112,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </DesignData>
     <Page Include="NewJourneyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

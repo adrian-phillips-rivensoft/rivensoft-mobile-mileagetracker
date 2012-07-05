@@ -36,12 +36,12 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private void ApplicationBarMenuItem_New_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateToPage(this, "/NewJourneyPage.xaml");
+            NavigationService.Navigate(new Uri("/NewJourneyPage.xaml", UriKind.Relative));
         }
 
         private void ApplicationBarMenuItem_Settings_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateToPage(this, "/SettingsPage.xaml");
+            NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
         }
 
         private void StackPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -50,7 +50,7 @@ namespace Rivensoft.Mobile.MileageTracker
 
             if (element != null)
             {
-                NavigationHelper.NavigateToPage(this, "/EditJourneyPage.xaml?Id=" + element.Tag);
+                NavigationService.Navigate(new Uri("/EditJourneyPage.xaml?Id=" + element.Tag, UriKind.Relative));
             }
         }
     }

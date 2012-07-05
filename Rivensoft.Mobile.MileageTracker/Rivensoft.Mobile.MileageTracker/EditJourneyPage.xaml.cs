@@ -59,12 +59,12 @@ namespace Rivensoft.Mobile.MileageTracker
             // TODO: Make the main page load data on navigate to?
             App.ViewModel.LoadData();
 
-            NavigationHelper.NavigateToPage(this, "/MainPage.xaml");
+            NavigationService.GoBack();
         }
 
         private void ApplicationBarIconButton_Cancel_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateToPage(this, "/MainPage.xaml");
+            NavigationService.GoBack();
         }
     }
 }

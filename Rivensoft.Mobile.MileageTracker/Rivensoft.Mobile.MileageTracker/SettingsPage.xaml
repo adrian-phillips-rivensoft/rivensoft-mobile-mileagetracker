@@ -53,8 +53,55 @@
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"></Grid>
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1"
+              Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="17" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="17" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Expire journeys after"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Grid.Row="0"
+                       Grid.Column="0" />
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="0"
+                        Grid.Column="2">
+                <TextBox x:Name="ExpireJourneysAfter"
+                         InputScope="Number"
+                         MaxLength="2"
+                         MinWidth="80"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center" />
+                <TextBlock Text="months"
+                           Style="{StaticResource PhoneTextNormalStyle}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+            </StackPanel>
+            <TextBlock Text="Units"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Grid.Row="2"
+                       Grid.Column="0" />
+            <toolkit:ListPicker x:Name="UnitType"
+                                VerticalAlignment="Center"
+                                Grid.Row="2"
+                                Grid.Column="2">
+                <toolkit:ListPickerItem Content="Miles" />
+                <toolkit:ListPickerItem Content="Kilometres" />
+            </toolkit:ListPicker>
+        </Grid>
     </Grid>
  
     <phone:PhoneApplicationPage.ApplicationBar>
