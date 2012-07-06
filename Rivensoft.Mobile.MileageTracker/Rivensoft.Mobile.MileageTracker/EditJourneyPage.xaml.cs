@@ -59,5 +59,26 @@ namespace Rivensoft.Mobile.MileageTracker
         {
             NavigationService.GoBack();
         }
+
+        private void StartMileage_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            // TODO: Define this elsewhere.
+            InputValidationService inputValidation = new InputValidationService();
+
+            if (!inputValidation.NumbersOnly(e.Key))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void EndMileage_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            InputValidationService inputValidation = new InputValidationService();
+
+            if (!inputValidation.NumbersOnly(e.Key))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

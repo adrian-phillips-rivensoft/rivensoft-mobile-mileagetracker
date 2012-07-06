@@ -57,7 +57,7 @@
               Grid.Row="1"
               Margin="12,0,12,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
+                <RowDefinition Height="200" />
                 <RowDefinition Height="17" />
                 <RowDefinition Height="200" />
                 <RowDefinition Height="17" />
@@ -74,20 +74,15 @@
                        VerticalAlignment="Center"
                        Grid.Row="0"
                        Grid.Column="0" />
-            <StackPanel Orientation="Horizontal"
-                        Grid.Row="0"
-                        Grid.Column="2">
-                <TextBox x:Name="ExpireJourneysAfter"
-                         InputScope="Number"
-                         MaxLength="2"
-                         MinWidth="80"
-                         HorizontalAlignment="Left"
-                         VerticalAlignment="Center" />
-                <TextBlock Text="months"
-                           Style="{StaticResource PhoneTextNormalStyle}"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Center" />
-            </StackPanel>
+                <toolkit:ListPicker x:Name="Test"
+                                VerticalAlignment="Center"
+                                Grid.Row="0"
+                                Grid.Column="2">
+                    <toolkit:ListPickerItem Content="30" />
+                    <toolkit:ListPickerItem Content="60" />
+                    <toolkit:ListPickerItem Content="90" />
+                    <toolkit:ListPickerItem Content="180" />
+                </toolkit:ListPicker>
             <TextBlock Text="Units"
                        Style="{StaticResource PhoneTextNormalStyle}"
                        HorizontalAlignment="Left"

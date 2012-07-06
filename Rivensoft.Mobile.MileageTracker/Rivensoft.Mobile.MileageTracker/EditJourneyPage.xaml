@@ -32,9 +32,19 @@
             <TextBlock Text="DATE" Style="{StaticResource PhoneTextNormalStyle}" />
             <toolkit:DatePicker x:Name="Date" Value="{Binding Journey.Date, Mode=TwoWay}" Margin="0,0,0,17" />
             <TextBlock Text="START MILEAGE" Style="{StaticResource PhoneTextNormalStyle}" />
-            <TextBox x:Name="StartMileage" InputScope="Number" Text="{Binding Journey.StartMileage, Mode=TwoWay}" Margin="0,0,0,17" />
+            <TextBox x:Name="StartMileage"
+                     Text="{Binding Path=Journey.StartMileage, Mode=TwoWay}"
+                     InputScope="Number"
+                     Margin="0,0,0,17"
+                     MaxLength="6"
+                     KeyDown="StartMileage_KeyDown" />
             <TextBlock Text="END MILEAGE" Style="{StaticResource PhoneTextNormalStyle}" />
-            <TextBox x:Name="EndMileage" InputScope="Number" Text="{Binding Journey.EndMileage, Mode=TwoWay}" Margin="0,0,0,17" />
+            <TextBox x:Name="EndMileage"
+                     Text="{Binding Path=Journey.EndMileage, Mode=TwoWay}"
+                     InputScope="Number"
+                     Margin="0,0,0,17"
+                     MaxLength="6"
+                     KeyDown="EndMileage_KeyDown" />
         </StackPanel>
     </Grid>
 
