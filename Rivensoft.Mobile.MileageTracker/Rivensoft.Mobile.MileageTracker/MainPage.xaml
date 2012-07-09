@@ -43,7 +43,7 @@
         <!--Pivot Control-->
         <controls:Pivot Title="{Binding Path=LocalisedResources.ApplicationTitle, Source={StaticResource LocalisedStrings}}">
             <!--Pivot item one-->
-            <controls:PivotItem Header="recent">
+            <controls:PivotItem Header="{Binding Path=LocalisedResources.PivotItemOneHeader, Source={StaticResource LocalisedStrings}}">
                 <!--Double line list with text wrapping-->
                 <ListBox x:Name="FirstListBox" Margin="0,0,-12,0" ItemsSource="{Binding Items}">
                     <ListBox.ItemTemplate>

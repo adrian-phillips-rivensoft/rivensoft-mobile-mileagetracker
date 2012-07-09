@@ -77,5 +77,176 @@ namespace Rivensoft.Mobile.MileageTracker {
                 return ResourceManager.GetString("ApplicationTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cancel.
+        /// </summary>
+        public static string CancelApplicationBarIconText {
+            get {
+                return ResourceManager.GetString("CancelApplicationBarIconText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to delete.
+        /// </summary>
+        public static string DeleteApplicationBarIconText {
+            get {
+                return ResourceManager.GetString("DeleteApplicationBarIconText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JOURNEY.
+        /// </summary>
+        public static string EditJourneyApplicationTitle {
+            get {
+                return ResourceManager.GetString("EditJourneyApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DATE.
+        /// </summary>
+        public static string EditJourneyDateLabel {
+            get {
+                return ResourceManager.GetString("EditJourneyDateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to END MILEAGE.
+        /// </summary>
+        public static string EditJourneyEndMileageLabel {
+            get {
+                return ResourceManager.GetString("EditJourneyEndMileageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to edit.
+        /// </summary>
+        public static string EditJourneyPageTitle {
+            get {
+                return ResourceManager.GetString("EditJourneyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to START MILEAGE.
+        /// </summary>
+        public static string EditJourneyStartMileageLabel {
+            get {
+                return ResourceManager.GetString("EditJourneyStartMileageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expire journeys after.
+        /// </summary>
+        public static string ExpireJourneysAfterSettingsLabel {
+            get {
+                return ResourceManager.GetString("ExpireJourneysAfterSettingsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to new.
+        /// </summary>
+        public static string NewApplicationBarIconText {
+            get {
+                return ResourceManager.GetString("NewApplicationBarIconText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JOURNEY.
+        /// </summary>
+        public static string NewJourneyApplicationTitle {
+            get {
+                return ResourceManager.GetString("NewJourneyApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DATE.
+        /// </summary>
+        public static string NewJourneyDateLabel {
+            get {
+                return ResourceManager.GetString("NewJourneyDateLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to END MILEAGE.
+        /// </summary>
+        public static string NewJourneyEndMileageLabel {
+            get {
+                return ResourceManager.GetString("NewJourneyEndMileageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to new.
+        /// </summary>
+        public static string NewJourneyPageTitle {
+            get {
+                return ResourceManager.GetString("NewJourneyPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to START MILEAGE.
+        /// </summary>
+        public static string NewJourneyStartMileageLabel {
+            get {
+                return ResourceManager.GetString("NewJourneyStartMileageLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to journeys.
+        /// </summary>
+        public static string PivotItemOneHeader {
+            get {
+                return ResourceManager.GetString("PivotItemOneHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to save.
+        /// </summary>
+        public static string SaveApplicationBarIconText {
+            get {
+                return ResourceManager.GetString("SaveApplicationBarIconText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to settings.
+        /// </summary>
+        public static string SettingsApplicationBarMenuItemText {
+            get {
+                return ResourceManager.GetString("SettingsApplicationBarMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to settings.
+        /// </summary>
+        public static string SettingsPageTitle {
+            get {
+                return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Units.
+        /// </summary>
+        public static string UnitsSettingsLabel {
+            get {
+                return ResourceManager.GetString("UnitsSettingsLabel", resourceCulture);
+            }
+        }
     }
 }

@@ -123,4 +123,61 @@
   <data name="ApplicationTitle" xml:space="preserve">
     <value>MILEAGE TRACKER</value>
   </data>
+  <data name="CancelApplicationBarIconText" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="DeleteApplicationBarIconText" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="EditJourneyApplicationTitle" xml:space="preserve">
+    <value>JOURNEY</value>
+  </data>
+  <data name="EditJourneyDateLabel" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="EditJourneyEndMileageLabel" xml:space="preserve">
+    <value>END MILEAGE</value>
+  </data>
+  <data name="EditJourneyPageTitle" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="EditJourneyStartMileageLabel" xml:space="preserve">
+    <value>START MILEAGE</value>
+  </data>
+  <data name="ExpireJourneysAfterSettingsLabel" xml:space="preserve">
+    <value>Expire journeys after</value>
+  </data>
+  <data name="NewApplicationBarIconText" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="NewJourneyApplicationTitle" xml:space="preserve">
+    <value>JOURNEY</value>
+  </data>
+  <data name="NewJourneyDateLabel" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="NewJourneyEndMileageLabel" xml:space="preserve">
+    <value>END MILEAGE</value>
+  </data>
+  <data name="NewJourneyPageTitle" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="NewJourneyStartMileageLabel" xml:space="preserve">
+    <value>START MILEAGE</value>
+  </data>
+  <data name="PivotItemOneHeader" xml:space="preserve">
+    <value>journeys</value>
+  </data>
+  <data name="SaveApplicationBarIconText" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="SettingsApplicationBarMenuItemText" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="SettingsPageTitle" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="UnitsSettingsLabel" xml:space="preserve">
+    <value>Units</value>
+  </data>
 </root>

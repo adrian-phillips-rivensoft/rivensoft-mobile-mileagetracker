@@ -55,6 +55,20 @@ namespace Rivensoft.Mobile.MileageTracker
             NavigationService.GoBack();
         }
 
+        private void ApplicationBarIconButton_Delete_Click(object sender, EventArgs e)
+        {
+            JourneyRepository journeyRepository = new JourneyRepository();
+
+            Journey journey = ((EditJourneyViewModel)this.DataContext).Journey;
+
+            journeyRepository.Delete(journey);
+
+            // TODO: Look at making the view model collection an observable collection.
+            App.ViewModel.LoadData();
+
+            NavigationService.GoBack();
+        }
+
         private void ApplicationBarIconButton_Cancel_Click(object sender, EventArgs e)
         {
             NavigationService.GoBack();

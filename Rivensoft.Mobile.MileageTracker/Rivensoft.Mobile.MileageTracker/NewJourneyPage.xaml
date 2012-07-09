@@ -44,21 +44,24 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="JOURNEY" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="new" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=LocalisedResources.NewJourneyApplicationTitle, Source={StaticResource LocalisedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="{Binding Path=LocalisedResources.NewJourneyPageTitle, Source={StaticResource LocalisedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="DATE" Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyDateLabel, Source={StaticResource LocalisedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}" />
             <toolkit:DatePicker x:Name="Date" Margin="0,0,0,17" />
-            <TextBlock Text="START MILEAGE" Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyStartMileageLabel, Source={StaticResource LocalisedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBox x:Name="StartMileage"
                      InputScope="Number"
                      Margin="0,0,0,17"
                      MaxLength="6"
                      KeyDown="StartMileage_KeyDown" />
-            <TextBlock Text="END MILEAGE" Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyEndMileageLabel, Source={StaticResource LocalisedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBox x:Name="EndMileage"
                      InputScope="Number"
                      Margin="0,0,0,17"

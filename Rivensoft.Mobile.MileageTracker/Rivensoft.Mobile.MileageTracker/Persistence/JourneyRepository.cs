@@ -123,5 +123,22 @@ namespace Rivensoft.Mobile.MileageTracker
                 dataContext.SubmitChanges();
             }
         }
+
+        public void Delete(Journey journey)
+        {
+            string connectionString = "Data Source=isostore:/MileageTracker.sdf";
+
+            using (LinqDataContext dataContext = new LinqDataContext(connectionString))
+            {
+                JourneyLinqEntity dbJourney =
+                    dataContext.Journeys
+                        .Where(j => j.Id == journey.Id)
+                        .Single();
+
+                dataContext.Journeys.DeleteOnSubmit(dbJourney);
+
+                dataContext.SubmitChanges();
+            }
+        }
     }
 }

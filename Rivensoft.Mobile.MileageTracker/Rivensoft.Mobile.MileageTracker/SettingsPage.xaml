@@ -48,7 +48,7 @@
                        Text="{Binding Path=LocalisedResources.ApplicationTitle, Source={StaticResource LocalisedStrings}}"
                        Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBlock x:Name="PageTitle"
-                       Text="settings"
+                       Text="{Binding Path=LocalisedResources.SettingsPageTitle, Source={StaticResource LocalisedStrings}}"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
@@ -68,7 +68,7 @@
                 <ColumnDefinition Width="30" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Expire journeys after"
+            <TextBlock Text="{Binding Path=LocalisedResources.ExpireJourneysAfterSettingsLabel, Source={StaticResource LocalisedStrings}}"
                        Style="{StaticResource PhoneTextNormalStyle}"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
@@ -83,7 +83,7 @@
                     <toolkit:ListPickerItem Content="90" />
                     <toolkit:ListPickerItem Content="180" />
                 </toolkit:ListPicker>
-            <TextBlock Text="Units"
+            <TextBlock Text="{Binding Path=LocalisedResources.UnitsSettingsLabel, Source={StaticResource LocalisedStrings}}"
                        Style="{StaticResource PhoneTextNormalStyle}"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
