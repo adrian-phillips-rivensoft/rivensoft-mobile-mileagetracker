@@ -61,6 +61,8 @@
                 <RowDefinition Height="17" />
                 <RowDefinition Height="200" />
                 <RowDefinition Height="17" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="17" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -96,6 +98,12 @@
                 <toolkit:ListPickerItem Content="Miles" />
                 <toolkit:ListPickerItem Content="Kilometres" />
             </toolkit:ListPicker>
+            <Button x:Name="EditCategoriesButton"
+                    Content="Edit Categories"
+                    Click="EditCategoriesButton_Click"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3" />
         </Grid>
     </Grid>
  

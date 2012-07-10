@@ -66,5 +66,10 @@ namespace Rivensoft.Mobile.MileageTracker
         {
             NavigationService.GoBack();
         }
+
+        private void EditCategoriesButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ViewCategoriesPage.xaml", UriKind.Relative));
+        }
     }
 }

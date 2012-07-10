@@ -9,10 +9,46 @@ namespace Rivensoft.Mobile.MileageTracker
 {
     using System;
 
-    public class Category
+    public class Category : EntityBase
     {
-        public int Id { get; set; }
+        private int id;
 
-        public string Name { get; set; }
+        private string name;
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+
+            set
+            {
+                if (value != this.id)
+                {
+                    this.id = value;
+
+                    this.NotifyPropertyChanged("Id");
+                }
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+
+            set
+            {
+                if (value != this.name)
+                {
+                    this.name = value;
+
+                    this.NotifyPropertyChanged("Name");
+                }
+            }
+        }
     }
 }

@@ -129,20 +129,29 @@
   <data name="DeleteApplicationBarIconText" xml:space="preserve">
     <value>delete</value>
   </data>
+  <data name="EditCategoryApplicationTitle" xml:space="preserve">
+    <value>CATEGORY</value>
+  </data>
+  <data name="EditCategoryNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="EditCategoryPageTitle" xml:space="preserve">
+    <value>edit</value>
+  </data>
   <data name="EditJourneyApplicationTitle" xml:space="preserve">
     <value>JOURNEY</value>
   </data>
   <data name="EditJourneyDateLabel" xml:space="preserve">
-    <value>DATE</value>
+    <value>Date</value>
   </data>
   <data name="EditJourneyEndMileageLabel" xml:space="preserve">
-    <value>END MILEAGE</value>
+    <value>End mileage</value>
   </data>
   <data name="EditJourneyPageTitle" xml:space="preserve">
     <value>edit</value>
   </data>
   <data name="EditJourneyStartMileageLabel" xml:space="preserve">
-    <value>START MILEAGE</value>
+    <value>Start mileage</value>
   </data>
   <data name="ExpireJourneysAfterSettingsLabel" xml:space="preserve">
     <value>Expire journeys after</value>
@@ -150,20 +159,29 @@
   <data name="NewApplicationBarIconText" xml:space="preserve">
     <value>new</value>
   </data>
+  <data name="NewCategoryApplicationTitle" xml:space="preserve">
+    <value>CATEGORY</value>
+  </data>
+  <data name="NewCategoryNameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewCategoryPageTitle" xml:space="preserve">
+    <value>new</value>
+  </data>
   <data name="NewJourneyApplicationTitle" xml:space="preserve">
     <value>JOURNEY</value>
   </data>
   <data name="NewJourneyDateLabel" xml:space="preserve">
-    <value>DATE</value>
+    <value>Date</value>
   </data>
   <data name="NewJourneyEndMileageLabel" xml:space="preserve">
-    <value>END MILEAGE</value>
+    <value>End mileage</value>
   </data>
   <data name="NewJourneyPageTitle" xml:space="preserve">
     <value>new</value>
   </data>
   <data name="NewJourneyStartMileageLabel" xml:space="preserve">
-    <value>START MILEAGE</value>
+    <value>Start mileage</value>
   </data>
   <data name="PivotItemOneHeader" xml:space="preserve">
     <value>journeys</value>
@@ -179,5 +197,11 @@
   </data>
   <data name="UnitsSettingsLabel" xml:space="preserve">
     <value>Units</value>
+  </data>
+  <data name="ViewCategoriesApplicationTitle" xml:space="preserve">
+    <value>SETTINGS</value>
+  </data>
+  <data name="ViewCategoriesPageTitle" xml:space="preserve">
+    <value>categories</value>
   </data>
 </root>

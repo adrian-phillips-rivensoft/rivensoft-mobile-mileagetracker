@@ -69,19 +69,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ApplicationResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TextBoxWithHeader.xaml.cs">
+      <DependentUpon>TextBoxWithHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\EntityBase.cs" />
+    <Compile Include="EditCategoryPage.xaml.cs">
+      <DependentUpon>EditCategoryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditJourneyPage.xaml.cs">
       <DependentUpon>EditJourneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Journey.cs" />
     <Compile Include="Domain\JourneyLog.cs" />
     <Compile Include="Enums\UnitType.cs" />
-    <Compile Include="Persistence\CategoryRepository.cs" />
-    <Compile Include="Persistence\LinqDataContext.cs" />
-    <Compile Include="Persistence\LinqEntities\CategoryLinqEntity.cs" />
-    <Compile Include="Persistence\LinqEntities\JourneyLinqEntity.cs" />
-    <Compile Include="Persistence\LinqEntities\LinqEntityBase.cs" />
+    <Compile Include="NewCategoryPage.xaml.cs">
+      <DependentUpon>NewCategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\LinqDataContext.cs" />
+    <Compile Include="Repositories\LinqEntities\CategoryLinqEntity.cs" />
+    <Compile Include="Repositories\LinqEntities\JourneyLinqEntity.cs" />
+    <Compile Include="Repositories\LinqEntities\LinqEntityBase.cs" />
     <Compile Include="Domain\Settings.cs" />
     <Compile Include="LocalisedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -91,17 +100,22 @@
       <DependentUpon>NewJourneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Persistence\JourneyRepository.cs" />
-    <Compile Include="Persistence\SettingsRepository.cs" />
+    <Compile Include="Repositories\JourneyRepository.cs" />
+    <Compile Include="Repositories\SettingsRepository.cs" />
     <Compile Include="Services\InputValidationService.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TiltEffect.cs" />
+    <Compile Include="ViewCategoriesPage.xaml.cs">
+      <DependentUpon>ViewCategoriesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\EditCategoryViewModel.cs" />
     <Compile Include="ViewModels\EditJourneyViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NewCategoryViewModel.cs" />
     <Compile Include="ViewModels\NewJourneyViewModel.cs" />
+    <Compile Include="ViewModels\ViewCategoriesViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +123,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Controls\TextBoxWithHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditCategoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EditJourneyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,11 +139,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NewCategoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NewJourneyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewCategoriesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

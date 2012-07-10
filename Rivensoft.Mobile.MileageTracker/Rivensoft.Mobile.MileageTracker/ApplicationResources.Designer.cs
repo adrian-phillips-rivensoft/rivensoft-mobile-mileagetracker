@@ -97,6 +97,33 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CATEGORY.
+        /// </summary>
+        public static string EditCategoryApplicationTitle {
+            get {
+                return ResourceManager.GetString("EditCategoryApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string EditCategoryNameLabel {
+            get {
+                return ResourceManager.GetString("EditCategoryNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to edit.
+        /// </summary>
+        public static string EditCategoryPageTitle {
+            get {
+                return ResourceManager.GetString("EditCategoryPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to JOURNEY.
         /// </summary>
         public static string EditJourneyApplicationTitle {
@@ -106,7 +133,7 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DATE.
+        ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string EditJourneyDateLabel {
             get {
@@ -115,7 +142,7 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to END MILEAGE.
+        ///   Looks up a localized string similar to End mileage.
         /// </summary>
         public static string EditJourneyEndMileageLabel {
             get {
@@ -133,7 +160,7 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to START MILEAGE.
+        ///   Looks up a localized string similar to Start mileage.
         /// </summary>
         public static string EditJourneyStartMileageLabel {
             get {
@@ -160,6 +187,33 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CATEGORY.
+        /// </summary>
+        public static string NewCategoryApplicationTitle {
+            get {
+                return ResourceManager.GetString("NewCategoryApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string NewCategoryNameLabel {
+            get {
+                return ResourceManager.GetString("NewCategoryNameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to new.
+        /// </summary>
+        public static string NewCategoryPageTitle {
+            get {
+                return ResourceManager.GetString("NewCategoryPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to JOURNEY.
         /// </summary>
         public static string NewJourneyApplicationTitle {
@@ -169,7 +223,7 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DATE.
+        ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string NewJourneyDateLabel {
             get {
@@ -178,7 +232,7 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to END MILEAGE.
+        ///   Looks up a localized string similar to End mileage.
         /// </summary>
         public static string NewJourneyEndMileageLabel {
             get {
@@ -196,7 +250,7 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to START MILEAGE.
+        ///   Looks up a localized string similar to Start mileage.
         /// </summary>
         public static string NewJourneyStartMileageLabel {
             get {
@@ -246,6 +300,24 @@ namespace Rivensoft.Mobile.MileageTracker {
         public static string UnitsSettingsLabel {
             get {
                 return ResourceManager.GetString("UnitsSettingsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SETTINGS.
+        /// </summary>
+        public static string ViewCategoriesApplicationTitle {
+            get {
+                return ResourceManager.GetString("ViewCategoriesApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to categories.
+        /// </summary>
+        public static string ViewCategoriesPageTitle {
+            get {
+                return ResourceManager.GetString("ViewCategoriesPageTitle", resourceCulture);
             }
         }
     }

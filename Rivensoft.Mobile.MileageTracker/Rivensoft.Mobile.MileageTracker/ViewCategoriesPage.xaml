@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="Rivensoft.Mobile.MileageTracker.NewJourneyPage"
+    x:Class="Rivensoft.Mobile.MileageTracker.ViewCategoriesPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -7,7 +7,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:Rivensoft.Mobile.MileageTracker"
-    xmlns:controls="clr-namespace:Rivensoft.Mobile.MileageTracker.Controls"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -36,7 +35,7 @@
             </toolkit:NavigationOutTransition.Forward>
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
-    
+
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -46,46 +45,37 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=LocalisedResources.NewJourneyApplicationTitle, Source={StaticResource LocalisedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="{Binding Path=LocalisedResources.NewJourneyPageTitle, Source={StaticResource LocalisedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=LocalisedResources.ViewCategoriesApplicationTitle, Source={StaticResource LocalisedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="{Binding Path=LocalisedResources.ViewCategoriesPageTitle, Source={StaticResource LocalisedStrings}}"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <toolkit:DatePicker x:Name="Date"
-                                Header="{Binding Path=LocalisedResources.NewJourneyDateLabel, Source={StaticResource LocalisedStrings}}"
-                                Margin="0,0,0,17" />
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyStartMileageLabel, Source={StaticResource LocalisedStrings}}"
-                           Margin="12,0,0,-5"
-                           Style="{StaticResource PhoneTextSubtleStyle}"/>
-                <TextBox x:Name="StartMileage"
-                         InputScope="Number"
-                         Margin="0,0,0,17"
-                         MaxLength="6"
-                         KeyDown="StartMileage_KeyDown" />
-            </StackPanel>
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-                <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyEndMileageLabel, Source={StaticResource LocalisedStrings}}"
-                           Margin="12,0,0,-5"
-                           Style="{StaticResource PhoneTextSubtleStyle}"/>
-                <TextBox x:Name="EndMileage"
-                         InputScope="Number"
-                         Margin="0,0,0,17"
-                         MaxLength="6"
-                         KeyDown="EndMileage_KeyDown" />
-            </StackPanel>
-        </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <toolkit:LongListSelector x:Name="LongListSelector" ItemsSource="{Binding Categories}">
+                <toolkit:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="12,8,0,8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding Name}" Style="{StaticResource PhoneTextLargeStyle}" FontFamily="{StaticResource PhoneFontFamilySemiBold}" Margin="12,-12,12,6"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </toolkit:LongListSelector.ItemTemplate>
+            </toolkit:LongListSelector>
+        </Grid>
     </Grid>
-
+ 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.save.rest.png"
-                                            Text="save"
-                                            Click="ApplicationBarIconButton_Save_Click"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar.cancel.rest.png"
-                                            Text="cancel"
-                                            Click="ApplicationBarIconButton_Cancel_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.new.rest.png"
+                                            Text="new"
+                                            Click="ApplicationBarMenuItem_New_Click" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

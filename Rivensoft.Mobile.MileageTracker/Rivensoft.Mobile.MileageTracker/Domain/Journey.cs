@@ -19,6 +19,8 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private int endMileage;
 
+        private Category category;
+
         public int Id
         {
             get
@@ -87,6 +89,24 @@ namespace Rivensoft.Mobile.MileageTracker
                     this.endMileage = value;
 
                     this.NotifyPropertyChanged("EndMileage");
+                }
+            }
+        }
+
+        public Category Category
+        {
+            get
+            {
+                return this.category;
+            }
+
+            set
+            {
+                if (value != this.category)
+                {
+                    this.category = value;
+
+                    this.NotifyPropertyChanged("Category");
                 }
             }
         }
