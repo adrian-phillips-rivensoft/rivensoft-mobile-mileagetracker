@@ -27,7 +27,11 @@ namespace Rivensoft.Mobile.MileageTracker
             // TODO: Add as field and bind up instead.
             Settings settings = settingsRepository.Get();
 
-            //this.ExpireJourneysAfter.Text = settings.ExpireJourneysAfterMonths.ToString();
+            this.ExpireAfterDays.SelectedItem =
+                this.ExpireAfterDays.Items
+                    .OfType<ListPickerItem>()
+                    .Where(i => (string)i.Tag == settings.ExpireAfterDays.ToString())
+                    .Single();
 
             // TODO: Can this be done any nicer?  Make sure it can't error.
             this.UnitType.SelectedItem =
@@ -45,15 +49,23 @@ namespace Rivensoft.Mobile.MileageTracker
             Settings settings = settingsRepository.Get();
 
             // TODO: Add robustness here, probably mostly in input validation.
-            //settings.ExpireJourneysAfterMonths = int.Parse(this.ExpireJourneysAfter.Text);
+            ListPickerItem expireItem = this.ExpireAfterDays.SelectedItem as ListPickerItem;
+
+            if (expireItem != null)
+            {
+                settings.ExpireAfterDays = int.Parse(expireItem.Tag.ToString());
+            }
 
             ListPickerItem item = this.UnitType.SelectedItem as ListPickerItem;
 
-            settings.UnitType =
-                (UnitType)Enum.Parse(
-                    typeof(UnitType),
-                    item.Content.ToString(),
-                    false);
+            if (item != null)
+            {
+                settings.UnitType =
+                    (UnitType)Enum.Parse(
+                        typeof(UnitType),
+                        item.Content.ToString(),
+                        false);
+            }
 
             settingsRepository.Save(settings);
 

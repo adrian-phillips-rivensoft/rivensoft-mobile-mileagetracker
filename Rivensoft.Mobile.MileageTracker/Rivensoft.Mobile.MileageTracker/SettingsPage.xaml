@@ -53,57 +53,29 @@
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
 
-        <Grid x:Name="ContentPanel"
-              Grid.Row="1"
-              Margin="12,0,12,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="200" />
-                <RowDefinition Height="17" />
-                <RowDefinition Height="200" />
-                <RowDefinition Height="17" />
-                <RowDefinition Height="200" />
-                <RowDefinition Height="17" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250" />
-                <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <TextBlock Text="{Binding Path=LocalisedResources.ExpireJourneysAfterSettingsLabel, Source={StaticResource LocalisedStrings}}"
-                       Style="{StaticResource PhoneTextNormalStyle}"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Center"
-                       Grid.Row="0"
-                       Grid.Column="0" />
-                <toolkit:ListPicker x:Name="Test"
-                                VerticalAlignment="Center"
-                                Grid.Row="0"
-                                Grid.Column="2">
-                    <toolkit:ListPickerItem Content="30" />
-                    <toolkit:ListPickerItem Content="60" />
-                    <toolkit:ListPickerItem Content="90" />
-                    <toolkit:ListPickerItem Content="180" />
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel>
+                <toolkit:ListPicker x:Name="ExpireAfterDays"
+                                    Header="{Binding Path=LocalisedResources.ExpireJourneysAfterSettingsLabel, Source={StaticResource LocalisedStrings}}"
+                                    VerticalAlignment="Center"
+                                    Margin="12,0,12,17">
+                    <toolkit:ListPickerItem Content="30 days" Tag="30" />
+                    <toolkit:ListPickerItem Content="60 days" Tag="60" />
+                    <toolkit:ListPickerItem Content="90 days" Tag="90" />
+                    <toolkit:ListPickerItem Content="180 days" Tag="180" />
                 </toolkit:ListPicker>
-            <TextBlock Text="{Binding Path=LocalisedResources.UnitsSettingsLabel, Source={StaticResource LocalisedStrings}}"
-                       Style="{StaticResource PhoneTextNormalStyle}"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Center"
-                       Grid.Row="2"
-                       Grid.Column="0" />
-            <toolkit:ListPicker x:Name="UnitType"
-                                VerticalAlignment="Center"
-                                Grid.Row="2"
-                                Grid.Column="2">
-                <toolkit:ListPickerItem Content="Miles" />
-                <toolkit:ListPickerItem Content="Kilometres" />
-            </toolkit:ListPicker>
-            <Button x:Name="EditCategoriesButton"
-                    Content="Edit Categories"
-                    Click="EditCategoriesButton_Click"
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="3" />
+                <toolkit:ListPicker x:Name="UnitType"
+                                    Header="{Binding Path=LocalisedResources.UnitsSettingsLabel, Source={StaticResource LocalisedStrings}}"
+                                    VerticalAlignment="Center"
+                                    Margin="12,0,12,17">
+                    <toolkit:ListPickerItem Content="Miles" />
+                    <toolkit:ListPickerItem Content="Kilometres" />
+                </toolkit:ListPicker>
+                <Button x:Name="EditCategoriesButton"
+                        Content="Edit Categories"
+                        Margin="0,0,0,17"
+                        Click="EditCategoriesButton_Click" />
+            </StackPanel>
         </Grid>
     </Grid>
  

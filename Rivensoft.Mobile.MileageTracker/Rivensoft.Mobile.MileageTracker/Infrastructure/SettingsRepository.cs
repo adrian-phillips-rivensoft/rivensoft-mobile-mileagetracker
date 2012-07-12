@@ -23,9 +23,9 @@ namespace Rivensoft.Mobile.MileageTracker
                 settings.IsSundayStartOfWeek = (bool)isolatedStorageSettings["IsSundayStartOfWeek"];
             }
 
-            if (isolatedStorageSettings.Contains("ExpireJourneysAfterMonths"))
+            if (isolatedStorageSettings.Contains("ExpireAfterDays"))
             {
-                settings.ExpireJourneysAfterMonths = (int)isolatedStorageSettings["ExpireJourneysAfterMonths"];
+                settings.ExpireAfterDays = (int)isolatedStorageSettings["ExpireAfterDays"];
             }
 
             if (isolatedStorageSettings.Contains("UnitType"))
@@ -49,13 +49,13 @@ namespace Rivensoft.Mobile.MileageTracker
                 isolatedStorageSettings.Add("IsSundayStartOfWeek", settings.IsSundayStartOfWeek);
             }
 
-            if (isolatedStorageSettings.Contains("ExpireJourneysAfterMonths"))
+            if (isolatedStorageSettings.Contains("ExpireAfterDays"))
             {
-                isolatedStorageSettings["ExpireJourneysAfterMonths"] = settings.ExpireJourneysAfterMonths;
+                isolatedStorageSettings["ExpireAfterDays"] = settings.ExpireAfterDays;
             }
             else
             {
-                isolatedStorageSettings.Add("ExpireJourneysAfterMonths", settings.ExpireJourneysAfterMonths);
+                isolatedStorageSettings.Add("ExpireAfterDays", settings.ExpireAfterDays);
             }
 
             if (isolatedStorageSettings.Contains("UnitType"))

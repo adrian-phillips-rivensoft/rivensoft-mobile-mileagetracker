@@ -55,7 +55,7 @@
             <toolkit:DatePicker x:Name="Date"
                                 Header="{Binding Path=LocalisedResources.NewJourneyDateLabel, Source={StaticResource LocalisedStrings}}"
                                 Margin="0,0,0,17" />
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Left">
                 <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyStartMileageLabel, Source={StaticResource LocalisedStrings}}"
                            Margin="12,0,0,-5"
                            Style="{StaticResource PhoneTextSubtleStyle}"/>
@@ -63,9 +63,10 @@
                          InputScope="Number"
                          Margin="0,0,0,17"
                          MaxLength="6"
-                         KeyDown="StartMileage_KeyDown" />
+                         KeyDown="StartMileage_KeyDown"
+                         LostFocus="StartMileage_LostFocus" />
             </StackPanel>
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Left">
                 <TextBlock Text="{Binding Path=LocalisedResources.NewJourneyEndMileageLabel, Source={StaticResource LocalisedStrings}}"
                            Margin="12,0,0,-5"
                            Style="{StaticResource PhoneTextSubtleStyle}"/>

@@ -86,11 +86,11 @@
     <Compile Include="NewCategoryPage.xaml.cs">
       <DependentUpon>NewCategoryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\CategoryRepository.cs" />
-    <Compile Include="Repositories\LinqDataContext.cs" />
-    <Compile Include="Repositories\LinqEntities\CategoryLinqEntity.cs" />
-    <Compile Include="Repositories\LinqEntities\JourneyLinqEntity.cs" />
-    <Compile Include="Repositories\LinqEntities\LinqEntityBase.cs" />
+    <Compile Include="Infrastructure\CategoryRepository.cs" />
+    <Compile Include="Infrastructure\LinqDataContext.cs" />
+    <Compile Include="Infrastructure\LinqEntities\CategoryLinqEntity.cs" />
+    <Compile Include="Infrastructure\LinqEntities\JourneyLinqEntity.cs" />
+    <Compile Include="Infrastructure\LinqEntities\LinqEntityBase.cs" />
     <Compile Include="Domain\Settings.cs" />
     <Compile Include="LocalisedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -100,8 +100,8 @@
       <DependentUpon>NewJourneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\JourneyRepository.cs" />
-    <Compile Include="Repositories\SettingsRepository.cs" />
+    <Compile Include="Infrastructure\JourneyRepository.cs" />
+    <Compile Include="Infrastructure\SettingsRepository.cs" />
     <Compile Include="Services\InputValidationService.cs" />
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>

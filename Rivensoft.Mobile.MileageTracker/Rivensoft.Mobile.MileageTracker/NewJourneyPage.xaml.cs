@@ -62,5 +62,13 @@ namespace Rivensoft.Mobile.MileageTracker
                 e.Handled = true;
             }
         }
+
+        private void StartMileage_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.EndMileage.Text))
+            {
+                this.EndMileage.Text = this.StartMileage.Text;
+            }
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private void ApplicationBarMenuItem_New_Click(object sender, EventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/NewCategoryPage.xaml", UriKind.Relative));
         }
     }
 }

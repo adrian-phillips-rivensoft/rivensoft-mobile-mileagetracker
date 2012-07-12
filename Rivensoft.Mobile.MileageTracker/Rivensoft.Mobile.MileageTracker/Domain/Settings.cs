@@ -14,13 +14,13 @@ namespace Rivensoft.Mobile.MileageTracker
         public Settings()
         {
             this.IsSundayStartOfWeek = false;
-            this.ExpireJourneysAfterMonths = 6;
+            this.ExpireAfterDays = 90;
             this.UnitType = UnitType.Miles;
         }
 
         public bool IsSundayStartOfWeek { get; set; }
 
-        public int ExpireJourneysAfterMonths { get; set; }
+        public int ExpireAfterDays { get; set; }
 
         public UnitType UnitType { get; set; }
     }

@@ -22,12 +22,12 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private void ApplicationBarIconButton_Cancel_Click(object sender, EventArgs e)
         {
-
+            NavigationService.GoBack();
         }
 
         private void ApplicationBarIconButton_Save_Click(object sender, EventArgs e)
         {
-
+            NavigationService.GoBack();
         }
     }
 }

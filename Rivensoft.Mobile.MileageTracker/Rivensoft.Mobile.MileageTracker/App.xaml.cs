@@ -135,7 +135,7 @@ namespace Rivensoft.Mobile.MileageTracker
 
             Settings settings = settingsRepository.Get();
 
-            DateTime expireAfter = DateTime.Now.Date.AddMonths(0 - settings.ExpireJourneysAfterMonths);
+            DateTime expireAfter = DateTime.Now.Date.AddMonths(0 - settings.ExpireAfterDays);
 
             JourneyRepository journeyRepository = new JourneyRepository();
 
