@@ -61,6 +61,15 @@ namespace Rivensoft.Mobile.MileageTracker {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to about.
+        /// </summary>
+        public static string AboutPageTitle {
+            get {
+                return ResourceManager.GetString("AboutPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mileage Tracker.
         /// </summary>
         public static string ApplicationName {

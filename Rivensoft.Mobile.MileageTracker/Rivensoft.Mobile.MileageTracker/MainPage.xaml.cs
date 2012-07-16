@@ -41,7 +41,8 @@ namespace Rivensoft.Mobile.MileageTracker
 
         private void ApplicationBarMenuItem_Settings_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+            //NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
         }
 
         private void StackPanel_Tap(object sender, System.Windows.Input.GestureEventArgs e)
